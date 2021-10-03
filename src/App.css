@@ -1,38 +1,70 @@
-.App {
-  text-align: center;
+html{
+    text-align: center;  
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+    padding:0px;
+    margin:0px;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+    color: white;
+    background-image: linear-gradient(rgb(0, 89, 116),rgb(149, 167, 173));
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.title{
+    padding:1rem;
+    margin:0px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.input-wrapper{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;  
 }
-
-.App-link {
-  color: #61dafb;
+.input{
+    padding:1rem;
+    border-radius: .5rem;
+    width:fit-content;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.display-wrapper{
+    
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.display{
+    background-color: white;
+    color: black;
+    margin-top:2rem;
+    width:fit-content;
+    border: solid black 1px;
+    padding:1rem;
+    padding-left:3rem;
+    padding-right:3rem;
+    border-radius: .5rem;
+}
+.statsBox{
+    font-size: 15px;
+}
+input{
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    height:1.5rem;
+    background-image:none;
+    border:none;
+    border-radius: .25rem;
+}
+label,input,select,button{
+    margin:.5rem;
+}
+:hover.submitBtn{
+    background-color: rgb(187, 187, 187);
+}
+.submitBtn{
+    color:rgb(65, 65, 65);
+    border:none;
+    border-radius: .5rem;
+    outline: 2px rgb(65,65,65) solid;
+    padding:.5rem;
+}
+.result{
+    padding:.5rem;
 }
