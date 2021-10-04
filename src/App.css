@@ -33,10 +33,9 @@ body{
 .display{
     background-color: white;
     color: black;
-    margin-top:2rem;
     width:fit-content;
     border: solid black 1px;
-    padding:1rem;
+    padding:0rem;
     padding-left:3rem;
     padding-right:3rem;
     border-radius: .5rem;
@@ -66,5 +65,5 @@ label,input,select,button{
     padding:.5rem;
 }
 .result{
-    padding:.5rem;
+    padding:.25rem;
 }

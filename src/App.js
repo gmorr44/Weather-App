@@ -6,7 +6,7 @@ import { WiDayCloudyHigh,WiRain,WiNightAltRain,WiDaySunny,WiNightAltCloudy,WiNig
 function App() {
   const [results, setResults] = useState({temp:'', windSpeed: '', windDirection:'', gust: '', clouds: '', city: '', conditions: '', rainTotal: ''})
   const [city, setCity] = useState("")
-  const [state, setState] = useState("")
+  // const [state, setState] = useState("")
   const [displayResults,setDisplayResults] = useState(false)
   const [icon,setIcon] = useState(<WiDaySunny size='8rem'/>)
 
@@ -103,7 +103,7 @@ function App() {
       alert("Please enter a city name")
     }
     else{
-      fetch(api.url + `${city},${state},US&units=imperial&appid=`+ api.key)
+      fetch(api.url + `${city},US&units=imperial&appid=`+ api.key)
       .then(res => res.json())
       .then(data=>{
         try{
@@ -140,7 +140,7 @@ function App() {
       <div className="input-wrapper">
         <div className="input">
         <h3>Enter your city for the current conditions!</h3>
-            <label className="city-search">City</label>
+            <label className="city-search">Search City:</label>
             <input 
             onChange={e=> setCity(e.target.value)} 
             onKeyPress={handleEnterKeypress}
@@ -161,14 +161,13 @@ function App() {
         <div className="display">
           <div className="result"><h3>{results.city} Current Conditions</h3> </div>
           <div className="result">{icon}</div>
-          <div className="result">{results.conditions}</div>
+          <div className="result">{results.conditions.toUpperCase()}</div>
           <div className="result"><h1>{results.temp} &#8457;</h1></div>
           <div className="statsBox">
             <div className="result">Wind Speed: {results.windSpeed}</div>
             <div className="result">Wind Direction: {results.windDirection}</div>
             <div className="result">Wind Gust: {results.gust}</div>
           </div>
-          <div className="result" >{state}</div>
         </div>
       </div>
       :
